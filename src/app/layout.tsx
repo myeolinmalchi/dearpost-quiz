@@ -23,7 +23,7 @@ const gowunBatang = Gowun_Batang({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.dearpost.kr/dearpost-quiz"),
+  metadataBase: new URL("https://myeolinmalchi.github.io/dearpost-quiz"),
   title: "DearPost - 나의 독서 유형 테스트",
   description:
     "독서와 기록 습관으로 알아보는 나만의 독서 성격 유형 테스트. 16가지 유형 중 나는 어떤 독서인일까?",
