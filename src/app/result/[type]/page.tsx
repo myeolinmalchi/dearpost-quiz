@@ -24,10 +24,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${personality.name} (${personality.code}) - DearPost`,
-    description: personality.subtitle,
+    description: `${personality.subtitle} | 나의 독서 유형 테스트 결과`,
     openGraph: {
+      title: `나의 독서 유형: ${personality.name} (${personality.code})`,
+      description: personality.subtitle,
+      images: [
+        {
+          url: `/og/og-${personality.code}.png`,
+          width: 1200,
+          height: 630,
+          alt: `${personality.name} - ${personality.subtitle}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
       title: `나의 독서 유형: ${personality.name}`,
       description: personality.subtitle,
+      images: [`/og/og-${personality.code}.png`],
     },
   };
 }
